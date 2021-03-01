@@ -13,10 +13,6 @@ provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
 }
 
-provider "docker" {
-  host = "unix:///var/run/docker.sock"
-}
-
 resource "aws_s3_bucket" "tfstate" {
   bucket = "terraform-tfstate-pguijarro"
   acl    = "private"
